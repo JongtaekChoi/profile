@@ -21,7 +21,9 @@ const Background = styled.div`
   width: 100vw;
   height: 100vh;
   background-image: url("/profile/orion.jpg");
-  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const BackgroundBlurhash = styled(Blurhash)`
