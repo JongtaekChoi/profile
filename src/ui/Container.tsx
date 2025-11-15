@@ -9,13 +9,13 @@ const BaseContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   position: relative;
 `;
 
 const Background = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -49,18 +49,20 @@ export default function Container({ children }: { children: ReactNode }) {
 
   return (
     <BaseContainer>
-      <Background style={{ backgroundImage: imageUrl && `url(${imageUrl})` }}>
-        {!imageLoaded && (
-          <BackgroundBlurhash
-            hash="L00l*jWBWBfQofoff6ayaefkkCj["
-            width="100%"
-            height="100%"
-            resolutionX={32}
-            resolutionY={32}
-            punch={1}
-          />
-        )}
-      </Background>
+      <div>
+        <Background style={{ backgroundImage: imageUrl && `url(${imageUrl})` }}>
+          {!imageLoaded && (
+            <BackgroundBlurhash
+              hash="L00l*jWBWBfQofoff6ayaefkkCj["
+              width="100%"
+              height="100%"
+              resolutionX={32}
+              resolutionY={32}
+              punch={1}
+            />
+          )}
+        </Background>
+      </div>
       <BaseContainer>{children}</BaseContainer>
     </BaseContainer>
   );
