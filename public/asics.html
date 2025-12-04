@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>아식스 러닝화 장단점 & 용도 비교</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+            background: #f4f4f4;
+            color: #111;
+        }
+
+        .card {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            padding: 24px 20px 28px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            font-size: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .shoe {
+            border-radius: 12px;
+            padding: 10px;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .shoe-name {
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 7px;
+            border-radius: 999px;
+            font-size: 10px;
+            background: #f0f4ff;
+            color: #2651c5;
+            margin-bottom: 2px;
+        }
+
+        .section-title {
+            font-size: 11px;
+            font-weight: 700;
+            margin-top: 4px;
+            margin-bottom: 2px;
+            color: #444;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 2px;
+            line-height: 1.35;
+        }
+
+        .pros li::before {
+            content: "✔ ";
+            color: #16a34a;
+            font-weight: 700;
+        }
+
+        .cons li::before {
+            content: "⚠ ";
+            color: #eab308;
+            font-weight: 700;
+        }
+
+        .use {
+            font-size: 11px;
+            color: #333;
+        }
+
+        .footer {
+            margin-top: 14px;
+            font-size: 10px;
+            color: #888;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="title">아식스 러닝화 장단점 & 용도 비교</div>
+        <div class="subtitle">노바블라스트 5 · 소닉블라스트 · 슈퍼블라스트 2 · 메가블라스트 · 매직 스피드 5</div>
+
+        <div class="grid">
+            <!-- 노바블라스트 5 -->
+            <div class="shoe">
+                <div class="shoe-name">노바블라스트 5</div>
+                <span class="tag">데일리 / 일상 러닝</span>
+                <div class="section-title">주요 느낌</div>
+                <div class="use">부드러운 쿠션 + 적당한 탄성, 편안함 위주 올라운더</div>
+
+                <div class="section-title">장점</div>
+                <ul class="pros">
+                    <li>쿠션·에너지리턴 밸런스 좋음</li>
+                    <li>초보~경험자 모두 무난하게 사용</li>
+                    <li>장거리 조깅, 회복주에 안정적</li>
+                </ul>
+
+                <div class="section-title">단점</div>
+                <ul class="cons">
+                    <li>인터벌/트랙 같은 고강도 스피드에는 아쉬움</li>
+                    <li>발이 예민한 사람은 약간 출렁임 느낌</li>
+                </ul>
+            </div>
+
+            <!-- 소닉블라스트 -->
+            <div class="shoe">
+                <div class="shoe-name">소닉블라스트</div>
+                <span class="tag">템포런 / 스피드 훈련</span>
+                <div class="section-title">주요 느낌</div>
+                <div class="use">플레이트로 탄탄한 추진력, 스피드 트레이너</div>
+
+                <div class="section-title">장점</div>
+                <ul class="pros">
+                    <li>템포런, 인터벌에 좋은 반응성</li>
+                    <li>카본 레이싱화보다 부담 적은 플레이트 감각</li>
+                    <li>중상급 러너의 훈련용으로 적합</li>
+                </ul>
+
+                <div class="section-title">단점</div>
+                <ul class="cons">
+                    <li>쿠션 감각은 노바/슈퍼블라스트보다 단단함</li>
+                    <li>느린 조깅이나 일상용으로는 과한 느낌</li>
+                </ul>
+            </div>
+
+            <!-- 슈퍼블라스트 2 -->
+            <div class="shoe">
+                <div class="shoe-name">슈퍼블라스트 2</div>
+                <span class="tag">슈퍼트레이너</span>
+                <div class="section-title">주요 느낌</div>
+                <div class="use">두툼한 스택 + 강한 반발, 장거리·템포 올라운더</div>
+
+                <div class="section-title">장점</div>
+                <ul class="pros">
+                    <li>장거리, 템포, 회복주까지 한 켤레로 커버</li>
+                    <li>가벼운 편이라 페이스 올리기 좋음</li>
+                    <li>쿠션 대비 안정감 좋은 편</li>
+                </ul>
+
+                <div class="section-title">단점</div>
+                <ul class="cons">
+                    <li>가격이 높은 편</li>
+                    <li>발볼 넓으면 갑갑하게 느껴질 수 있음</li>
+                </ul>
+            </div>
+
+            <!-- 메가블라스트 -->
+            <div class="shoe">
+                <div class="shoe-name">메가블라스트</div>
+                <span class="tag">하이퍼 트레이너</span>
+                <div class="section-title">주요 느낌</div>
+                <div class="use">시리즈 중 최고 수준 반발감, 경량·탄성 특화</div>
+
+                <div class="section-title">장점</div>
+                <ul class="pros">
+                    <li>매우 강한 반발력으로 페이스 업 용이</li>
+                    <li>장거리부터 템포까지 파워풀한 주행감</li>
+                    <li>슈퍼블라스트보다 “재미있는” 탄성 느낌</li>
+                </ul>
+
+                <div class="section-title">단점</div>
+                <ul class="cons">
+                    <li>가격이 매우 높은 편</li>
+                    <li>앞꿈치 쪽 피로감 느끼는 사람도 있음</li>
+                </ul>
+            </div>
+
+            <!-- 매직 스피드 5 -->
+            <div class="shoe">
+                <div class="shoe-name">매직 스피드 5</div>
+                <span class="tag">레이스 / 기록용</span>
+                <div class="section-title">주요 느낌</div>
+                <div class="use">카본 플레이트 기반 레이싱화, 빠른 페이스 특화</div>
+
+                <div class="section-title">장점</div>
+                <ul class="pros">
+                    <li>경량 + 강한 추진력으로 레이스에 최적</li>
+                    <li>10K·하프·마라톤 기록 노릴 때 좋음</li>
+                    <li>고속 템포 세션에 훌륭한 반응성</li>
+                </ul>
+
+                <div class="section-title">단점</div>
+                <ul class="cons">
+                    <li>쿠션이 데일리 트레이너보다 적어 단단함</li>
+                    <li>느린 조깅·초보 러너에게는 부담될 수 있음</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            정리: 나에게 맞는 용도(데일리 / 템포 / 레이스)를 먼저 정하고 선택하세요.
+        </div>
+    </div>
+</body>
+
+</html>
