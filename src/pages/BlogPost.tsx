@@ -15,9 +15,13 @@ const Wrapper = styled.div`
   position: relative;
   max-width: 900px;
   width: 100%;
-  padding: 2rem;
+  padding: 1.25rem;
   color: #fff;
   z-index: 1;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
 `;
 
 const Header = styled.header`
@@ -99,7 +103,7 @@ export default function BlogPost() {
             </Header>
 
             <Article>
-              <div className="prose max-w-none">
+              <div className="prose prose-slate dark:prose-invert max-w-none">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeHighlight]}
