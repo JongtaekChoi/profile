@@ -59,59 +59,6 @@ const Article = styled.article`
   padding: 1.5rem;
   color: #222;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-  /* markdown basic styling */
-  line-height: 1.75;
-
-  h1,
-  h2,
-  h3 {
-    color: #1f2d3a;
-    margin-top: 1.6rem;
-    margin-bottom: 0.75rem;
-  }
-
-  p {
-    margin: 0.85rem 0;
-  }
-
-  a {
-    color: #2563eb;
-  }
-
-  pre {
-    overflow: auto;
-    border-radius: 10px;
-    padding: 1rem;
-  }
-
-  code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    font-size: 0.95em;
-  }
-
-  blockquote {
-    border-left: 4px solid #667eea;
-    padding-left: 1rem;
-    color: #334;
-    margin: 1rem 0;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  th,
-  td {
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-  }
-
-  th {
-    background: #f5f5f5;
-  }
 `;
 
 export default function BlogPost() {
@@ -152,9 +99,14 @@ export default function BlogPost() {
             </Header>
 
             <Article>
-              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
-                {post.content}
-              </ReactMarkdown>
+              <div className="prose prose-slate max-w-none prose-pre:p-0">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeHighlight]}
+                >
+                  {post.content}
+                </ReactMarkdown>
+              </div>
             </Article>
           </>
         )}
