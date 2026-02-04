@@ -8,6 +8,7 @@ import mailIcon from "src/assets/email.svg";
 import octicon from "src/assets/octicon.svg";
 import phoneIcon from "src/assets/phone.svg";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Main() {
   useEffect(() => {
@@ -38,6 +39,13 @@ export default function Main() {
           <img src={octicon} className="logo octicon" alt="Github logo" />
           <span>https://github.com/JongtaekChoi</span>
         </a>
+      </div>
+
+      <div>
+        <Link className="row github" to="/blog">
+          <img src={octicon} className="logo octicon" alt="Blog" />
+          <span>Blog</span>
+        </Link>
       </div>
       <div>
         <a className="row github" href="mailto:lastchoice86@naver.com">

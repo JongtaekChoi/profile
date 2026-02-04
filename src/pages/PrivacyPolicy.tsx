@@ -267,7 +267,7 @@ export default function PrivacyPolicy() {
           <LastUpdated>최종 업데이트: 2024년 9월 22일</LastUpdated>
         </Content>
 
-        <BackLink to="/profile/tactics-board">
+        <BackLink to="/tactics-board">
           ← 메인 페이지로 돌아가기
         </BackLink>
       </ContentWrapper>

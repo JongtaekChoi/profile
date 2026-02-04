@@ -273,7 +273,7 @@ export default function TacticsBoard() {
             © 2024 축구 전술 보드. 개인 포트폴리오 프로젝트입니다.
             <br />
             <Link
-              to="/profile/privacy-policy"
+              to="/privacy-policy"
               style={{ color: "#ccc", textDecoration: "underline" }}
             >
               개인정보 처리방침
