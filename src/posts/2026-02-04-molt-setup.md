@@ -1,5 +1,5 @@
 ---
-title: "Molt(몰트봇) 설정: 텔레그램에서 개발 작업을 굴리는 개인 에이전트"
+title: "Clawdbot(몰트봇) 셋업: 텔레그램에서 개발 작업을 굴리는 개인 에이전트"
 date: "2026-02-04"
 description: "Mac mini에서 Clawdbot(몰트봇)를 띄우고, 텔레그램 대화로 작업/코딩/배포까지 이어지는 흐름을 정리"
 tags: ["molt", "clawdbot", "telegram", "automation", "devlog"]
@@ -8,10 +8,16 @@ tags: ["molt", "clawdbot", "telegram", "automation", "devlog"]
 > 목표: “내가 자주 들어가는 텔레그램”을 **작업 콘솔**처럼 쓰고,
 > 글쓰기/코딩/배포/기록까지 한 흐름으로 이어지게 만들기.
 
+## 이 글이 다루는 것(정확히)
+이 글은 **Claude(클로드) 앱 설정**이 아니라,
+Mac mini에서 돌아가는 **Clawdbot 셋업(= 몰트봇 운용)** 정리다.
+
+(이름이 비슷해서 헷갈리기 쉬움: *Claude* ≠ *Clawdbot*)
+
 ## Molt가 뭐냐
 내 셋업에서 **Molt(몰트봇)** 는 Clawdbot 위에서 돌아가는 개인 에이전트다.
 
-- 대화로 요청 → 로컬에서 코드 수정/실행 → GitHub 배포까지 연결
+- 텔레그램 대화로 요청 → 로컬에서 코드 수정/실행 → GitHub 배포까지 연결
 - 단순 Q&A가 아니라, **작업을 실제로 해주는 쪽**에 가까움
 
 ## 큰 구성도(아키텍처)
