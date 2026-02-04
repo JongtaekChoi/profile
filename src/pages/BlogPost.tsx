@@ -99,7 +99,7 @@ export default function BlogPost() {
             </Header>
 
             <Article>
-              <div className="prose prose-slate max-w-none prose-pre:p-0">
+              <div className="prose max-w-none">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeHighlight]}
