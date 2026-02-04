@@ -84,11 +84,19 @@ export default function BlogList() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
     (async () => {
-      const all = await getAllPosts();
-      setPosts(all);
-      setLoading(false);
+      try {
+        const all = await getAllPosts();
+        setPosts(all);
+      } catch (e) {
+        console.error(e);
+        setError(e instanceof Error ? e.message : String(e));
+      } finally {
+        setLoading(false);
+      }
     })();
   }, []);
 
@@ -105,7 +113,14 @@ export default function BlogList() {
         <Sub>개발하면서 배운 것들/기록들. (Markdown 기반)</Sub>
 
         {loading && <div>로딩중…</div>}
-        {empty && <div>아직 글이 없어. `src/posts`에 마크다운 파일을 추가하면 자동으로 뜸.</div>}
+        {error && (
+          <div>
+            글 목록을 불러오다가 오류가 났어: <code>{error}</code>
+          </div>
+        )}
+        {empty && !error && (
+          <div>아직 글이 없어. `src/posts`에 마크다운 파일을 추가하면 자동으로 뜸.</div>
+        )}
 
         <List>
           {posts.map((p) => (
