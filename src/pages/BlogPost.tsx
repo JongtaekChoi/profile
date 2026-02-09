@@ -63,6 +63,11 @@ const Article = styled.article`
   padding: 1.5rem;
   color: #222;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  @media (prefers-color-scheme: dark) {
+    background: rgba(17, 24, 39, 0.92);
+    color: #e5e7eb;
+  }
 `;
 
 export default function BlogPost() {
