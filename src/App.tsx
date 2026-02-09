@@ -6,6 +6,9 @@ import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
 import Main from "./pages/Main";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Projects from "./pages/Projects";
+import CubeBrainTrainer from "./pages/projects/CubeBrainTrainer";
+import Sansu from "./pages/projects/Sansu";
 import TacticsBoard from "./pages/TacticsBoard";
 
 function App() {
@@ -17,6 +20,10 @@ function App() {
 
       <Route path="/blog" element={<BlogList />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
+
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/projects/cube-brain-trainer" element={<CubeBrainTrainer />} />
+      <Route path="/projects/sansu" element={<Sansu />} />
 
       {/* Backward compatibility for old links */}
       <Route path="/profile" element={<Navigate to="/" replace />} />

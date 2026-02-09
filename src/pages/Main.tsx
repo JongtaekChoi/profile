@@ -47,6 +47,13 @@ export default function Main() {
           <span>Blog</span>
         </Link>
       </div>
+
+      <div>
+        <Link className="row github" to="/projects">
+          <img src={octicon} className="logo octicon" alt="Projects" />
+          <span>Projects</span>
+        </Link>
+      </div>
       <div>
         <a className="row github" href="mailto:lastchoice86@naver.com">
           <img src={mailIcon} className="logo email" alt="Email logo" />
