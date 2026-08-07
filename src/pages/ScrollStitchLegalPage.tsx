@@ -130,14 +130,29 @@ const BackLink = styled(Link)`
   }
 `;
 
+/// The App Store listing points all three of its locales at this one URL, so
+/// the page cannot assume who is reading. It used to open in Korean because
+/// that is the app's source language — which meant an App Review reviewer, and
+/// every English or Spanish user, landed on a page they could not read and had
+/// to notice the switcher first. Reading the browser's preference costs nothing
+/// and is right for all three.
+function preferredLocale(): Locale {
+  if (typeof navigator === "undefined") return "en";
+  for (const tag of navigator.languages ?? [navigator.language]) {
+    const base = tag.toLowerCase().split("-")[0];
+    if (base === "ko" || base === "en" || base === "es") return base;
+  }
+  // English rather than Korean: the listing's primary language is English, so
+  // an unrecognised locale is far more likely to read that than Korean.
+  return "en";
+}
+
 export default function ScrollStitchLegalPage({
   pages,
 }: {
   pages: Record<Locale, Page>;
 }) {
-  // Korean first because the app's source language is Korean; the App Store
-  // listing can point each locale at this same URL.
-  const [locale, setLocale] = useState<Locale>("ko");
+  const [locale, setLocale] = useState<Locale>(preferredLocale);
   const page = pages[locale];
 
   return (
