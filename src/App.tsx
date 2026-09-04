@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import CubeBrainTrainer from "./pages/projects/CubeBrainTrainer";
 import Sansu from "./pages/projects/Sansu";
 import ScrollStitchLegalPage from "./pages/ScrollStitchLegalPage";
+import ScrollStitch from "./pages/projects/ScrollStitch";
 import { PRIVACY, SUPPORT } from "./pages/scrollStitchLegal";
 import TacticsBoard from "./pages/TacticsBoard";
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/projects" element={<Projects />} />
       <Route path="/projects/cube-brain-trainer" element={<CubeBrainTrainer />} />
       <Route path="/projects/sansu" element={<Sansu />} />
+      <Route path="/projects/scroll-stitch" element={<ScrollStitch />} />
 
       {/* Both are App Store submission requirements and go in the listing, so
           the paths must stay put once entered there. */}

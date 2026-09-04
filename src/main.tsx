@@ -3,7 +3,7 @@ import "./index.css";
 // Some dependencies (e.g., gray-matter) expect Node globals.
 // We polyfill the minimum needed for the browser build.
 import { Buffer } from "buffer";
-(globalThis as any).Buffer = Buffer;
+(globalThis as typeof globalThis & { Buffer: typeof Buffer }).Buffer = Buffer;
 
 import App from "./App.tsx";
 import { createRoot } from "react-dom/client";
