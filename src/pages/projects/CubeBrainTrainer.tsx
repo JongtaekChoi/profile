@@ -69,7 +69,7 @@ export default function CubeBrainTrainer() {
         </TopNav>
 
         <Title>Cube Brain Trainer (큐브 연습앱)</Title>
-        <Meta>상태: Prototype / Alpha</Meta>
+        <Meta>상태: iOS 출시 완료 · 무료 다운로드</Meta>
 
         <Card>
           <div className="prose prose-slate dark:prose-invert max-w-none">
@@ -136,7 +136,7 @@ export default function CubeBrainTrainer() {
             </ul>
 
             <p>
-              <strong>데모</strong>: <a href="https://cube-brain-trainer-dev--cube-brain-trainer-dev.expo.app/practice" target="_blank" rel="noreferrer">Expo Web (practice)</a>
+              <strong>다운로드</strong>: <a href="https://apps.apple.com/kr/app/cube-brain-trainer/id6793193738" target="_blank" rel="noreferrer">App Store에서 무료로 받기</a> · <a href="https://cube-brain-trainer-dev--cube-brain-trainer-dev.expo.app/practice" target="_blank" rel="noreferrer">Expo Web 데모</a>
             </p>
 
             <p>
