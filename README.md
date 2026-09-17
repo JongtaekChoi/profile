@@ -1,50 +1,26 @@
-# React + TypeScript + Vite
+# JT. Maker's Catalog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+최종택의 개인 포트폴리오이자, 직접 만들고 출시한 제품을 모아 둔 카탈로그입니다.
 
-Currently, two official plugins are available:
+- 출시 앱은 `FREE` 상태로 소개하고 각 프로젝트 상세로 연결합니다.
+- 현재 제작자 본인은 `SOLD OUT` 상태이며, 새로운 협업은 2027년 3월 이후 일정 협의가 가능합니다.
+- 블로그에는 제품을 만들고 운영하며 남긴 기록을 쌓습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## Expanding the ESLint configuration
+React · TypeScript · Vite · Tailwind CSS · React Router
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Local development
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Build
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run build
 ```
+
+GitHub Pages 배포를 위해 Vite base path는 `/profile/`로 설정되어 있습니다.
